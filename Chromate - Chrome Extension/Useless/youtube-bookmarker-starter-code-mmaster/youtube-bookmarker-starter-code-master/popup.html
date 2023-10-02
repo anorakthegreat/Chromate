@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Retriever</title>
+  <style>
+    ul {
+      list-style-type: none; /* Remove bullet points */
+      padding: 0; /* Remove default padding */
+    }
+
+    h1#title {
+      list-style-type: none; /* Use disc bullets */
+      /* padding-left: 20px; */
+    }
+
+    ul#bulletList {
+      list-style-type: none; /* Use disc bullets */
+      /* padding-left: 20px;    Adjust the left padding as needed */
+    }
+
+    li {
+      margin-bottom: 5px; /* Add some spacing between list items */
+    }
+
+    body {
+      width: 300px; /* Adjust the value to your desired width */
+    }
+
+    .button-container {
+      /* display: flex;  */
+      justify-content: space-between; 
+      /* width: 20px */
+      
+      /* padding: 20px */
+    }
+
+    .deleteTabContainer {
+      /* display: flex; */
+      /* margin: 0 auto; */
+      /* justify-content: center; Center horizontally */
+      /* height: 100vh;  */
+      display: grid;
+      place-items: center;
+      height: 100vh; 
+    }
+
+    button#deleteTab {
+        margin-top: 10px;
+        /* display: block; 
+        margin: 0 auto;  */
+
+    }
+
+    button#nextTabGroup {
+      /* display: flex;  */
+      /* margin-bottom: 20px;
+      width: 10px; */
+
+      margin-top: 10px;
+    }
+
+  </style>
+  <script src="popup.js"></script>
+
+  <script src="functions.js"></script>
+</head>
+<body>
+
+  <h1 id = "title"></h1>
+  <!-- <h1>Open tabs</h1> -->
+
+  <div id = "button-container" class="button-container">
+    <button id ="nextWindow" >Next Window </button>
+    <!-- <button id = "saveTabs">Save Tabs</button> -->
+    <button id = "getSavedTabs">Retrieve Saved</button>
+  </div>
+
+  <div id = "savedButtons">
+    <button id ="openTabs"> Open Tab Group </button>
+    <button id ="back"> Back </button>
+    <button id = "clearStorage">Clear Storage</button>
+
+   
+    <!-- <button id = "clearStorage">Clear Storage</button> -->
+    
+    <!-- <button class="end-btn"> View profile </button> -->
+  </div>
+
+  <div id ="deleteTabContainer">
+    <button id = "deleteTab">Delete Tab</button>
+  </div>
+
+  <h1 id = "info">Tab Group Saved...</h1>
+  <h1 id = "warning">No Tabs Selected</h1>
+
+  <div id = "advanceTabGroup">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <button id = "previousTabGroup"> <i class="fa fa-chevron-left"></i> Previous Tab Group  </button>
+    <button id = "nextTabGroup">Next Tab Group <i class="fa fa-chevron-right"></i> </button>
+  </div>
+
+  <h1></h1>
+
+  <form id = "inputForm">
+    <label for="nameInput">Name:</label>
+    <!-- <input type="text" id="nameInput" required> -->
+    <input type="text" id="nameInput" autocomplete="false" required>
+
+    <button id="saveTabs">Save Tabs</button>
+  </form>
+
+ 
+
+  <h1 id="SavedTabs"></h1>
+
+  <!-- <div id = "tab#"> -->
+  <h1 id="TabNumber"></h1>
+  <!-- </div> -->
+
+  <ul id="tabList"></ul>
+  <ul id ="bulletList"></ul>
+  <div id = "checkAllDiv">
+    <button id="checkAllButton">Check All Toggle</button>
+  </div>
+  <h1 id="windowList"></h1>
+  <h1 id="windowNumber"></h1>
+  <h1 id="LL"></h1>
+
+</body>
+</html>
